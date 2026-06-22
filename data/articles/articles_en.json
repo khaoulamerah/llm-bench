@@ -1,0 +1,32 @@
+﻿[
+  {
+    "id": "en_01",
+    "title": "Ooredoo Algeria surpasses Djezzy in subscriber count",
+    "text": "Ooredoo Algeria announced it has overtaken Djezzy in total subscriber numbers during Q1 2026, driven by an aggressive 5G rollout in major urban centers across the country.",
+    "expected_label": "negative"
+  },
+  {
+    "id": "en_02",
+    "title": "Djezzy expands fiber network to five new regions",
+    "text": "Djezzy announced on Tuesday the launch of its fiber-optic offering in five additional wilayas, with download speeds reaching up to 100 Mbps for residential customers.",
+    "expected_label": "positive"
+  },
+  {
+    "id": "en_03",
+    "title": "ARCEP publishes quarterly telecom market report",
+    "text": "The Algerian telecom regulator ARCEP released its quarterly report on the state of the telecommunications market, without singling out any specific operator by name.",
+    "expected_label": "neutral"
+  },
+  {
+    "id": "en_04",
+    "title": "Mobilis fined by Algerian telecom regulator",
+    "text": "Mobilis was fined by ARCEP for failing to meet network coverage commitments in several southern wilayas. Djezzy remains fully compliant with all regulatory requirements.",
+    "expected_label": "positive"
+  },
+  {
+    "id": "en_05",
+    "title": "New tax proposal targets all telecom operators",
+    "text": "The Algerian government is considering a new tax applicable to all telecom operators including Djezzy, Ooredoo, and Mobilis, as part of the 2027 finance law discussions.",
+    "expected_label": "negative"
+  }
+]
