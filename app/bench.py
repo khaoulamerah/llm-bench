@@ -18,7 +18,7 @@ def load_articles(lang: str) -> list:
     if not os.path.exists(path):
         print(f"[!] Fichier manquant, ignore : {path}")
         return []
-    with open(path, "r", encoding="utf-8") as f:
+    with open(path, "r", encoding="utf-8-sig") as f:
         articles = json.load(f)
     for a in articles:
         a["lang"] = lang
