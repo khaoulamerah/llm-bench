@@ -1,15 +1,11 @@
 # LLM Bench — Local Model Testing with Docker & Ollama
 
-## What is this project?
-
 This project is a **local benchmarking environment** built to test and compare
 open-weight LLM models (Qwen2.5, Llama3.1, Mistral...) before integrating
 one of them into the **RSS Intelligence Pipeline** — a real production project
 developed for **Djezzy**, Algeria's leading telecom operator.
 
-The RSS pipeline currently uses Gemini (Google cloud API) for sentiment analysis
-and summarization. Djezzy requires a fully local solution for internal security
-reasons — no data should leave their infrastructure. This bench helps answer:
+ This bench helps answer:
 
 - Which local model best replicates Gemini's domain-aware reasoning
   ("good news for Ooredoo = bad news for Djezzy") in French, Arabic, and English?
