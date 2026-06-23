@@ -3,7 +3,7 @@ from prompts import SENTIMENT_SYSTEM_PROMPT, build_sentiment_user_prompt
 
 
 def _enforce_score_coherence(label: str, score: float) -> float:
-    if label == "positive" and score < 0.5:
+    if label == "positive" and score <= 0.5:
         return 0.65
     if label == "negative" and score > 0.5:
         return 0.35
