@@ -67,6 +67,12 @@ docker compose up -d --build
 docker compose ps
 ````
 
+### Download models into Ollama container
+```bash
+chmod +x scripts/pull_models.sh
+./scripts/pull_models.sh
+``` 
+
 ### Download a model into the Ollama container
 
 ```bash
