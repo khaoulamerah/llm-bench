@@ -20,7 +20,8 @@ services:
       ollama:
         condition: service_healthy
     environment:
-      - OLLAMA_HOST=http://ollama:11434
+      - OLLAMA_HOST=http://ollama:11434 
+      # connect this "- OLLAMA_HOST=http://ollama:11434 "with domain name 
     volumes:
       - ./data:/app/data
       - ./results:/app/results
@@ -29,3 +30,7 @@ services:
 
 volumes:
   ollama_models:
+
+
+# correct design for distributed system for two services: ollama and app i want that the systems are connected for each others like if someone tambe the auther work normally i mean for exemple if app not work the ollama sevice continue work normally 
+# correct the hard code like urls should be in .env file 
