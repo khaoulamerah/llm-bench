@@ -5,7 +5,7 @@ open-weight LLM models (Qwen2.5, Llama3.1, Mistral...) before integrating
 one of them into the **RSS Intelligence Pipeline** — a real production project
 developed for **Djezzy**, Algeria's leading telecom operator.
 
- This bench helps answer:
+This bench helps answer:
 
 - Which local model best replicates Gemini's domain-aware reasoning
   ("good news for Ooredoo = bad news for Djezzy") in French, Arabic, and English?
@@ -68,10 +68,10 @@ docker compose ps
 ````
 
 ### Download models into Ollama container
+
 ```bash
-chmod +x scripts/pull_models.sh
-./scripts/pull_models.sh
-``` 
+docker compose exec ollama bash /app/scripts/pull_models.sh
+```
 
 ### Download a model into the Ollama container
 
