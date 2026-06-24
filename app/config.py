@@ -1,6 +1,6 @@
 import os
 
-OLLAMA_HOST = os.environ.get("OLLAMA_HOST", "http://localhost:11434")
+OLLAMA_HOST = os.environ.get("OLLAMA_HOST", "http://ollama:11434")
 OLLAMA_CHAT_URL = f"{OLLAMA_HOST}/api/chat"
 OLLAMA_TAGS_URL = f"{OLLAMA_HOST}/api/tags"
 

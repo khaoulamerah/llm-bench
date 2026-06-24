@@ -3,14 +3,17 @@ services:
     image: ollama/ollama:latest
     container_name: llm-bench-ollama
     ports:
-      - "11434:11434"
+      - "${OLLAMA_PORT:-11434}:11434"
     volumes:
       - ollama_models:/root/.ollama
+    networks:
+      - llm-net
     healthcheck:
       test: ["CMD", "ollama", "list"]
       interval: 10s
       timeout: 5s
       retries: 5
+      start_period: 10s
     restart: unless-stopped
 
   app:
@@ -20,17 +23,18 @@ services:
       ollama:
         condition: service_healthy
     environment:
-      - OLLAMA_HOST=http://ollama:11434 
-      # connect this "- OLLAMA_HOST=http://ollama:11434 "with domain name 
+      - OLLAMA_HOST=${OLLAMA_HOST:-http://ollama:11434}
     volumes:
       - ./data:/app/data
       - ./results:/app/results
       - ./app:/app
-    command: tail -f /dev/null
+    networks:
+      - llm-net
+    restart: on-failure
+
+networks:
+  llm-net:
+    driver: bridge
 
 volumes:
   ollama_models:
-
-
-# correct design for distributed system for two services: ollama and app i want that the systems are connected for each others like if someone tambe the auther work normally i mean for exemple if app not work the ollama sevice continue work normally 
-# correct the hard code like urls should be in .env file 
